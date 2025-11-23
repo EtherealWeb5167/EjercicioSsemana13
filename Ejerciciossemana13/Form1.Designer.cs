@@ -40,8 +40,11 @@
             this.lblEjercicio1 = new System.Windows.Forms.Label();
             this.btnBuscarEjercicio1 = new System.Windows.Forms.Button();
             this.lblResultadoEjercicio1 = new System.Windows.Forms.Label();
+            this.btnEjercicio2 = new System.Windows.Forms.Button();
+            this.lbEjercicio2 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -75,6 +78,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lbEjercicio2);
+            this.tabPage2.Controls.Add(this.btnEjercicio2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -164,6 +169,25 @@
             this.lblResultadoEjercicio1.TabIndex = 4;
             this.lblResultadoEjercicio1.Text = "esperando";
             // 
+            // btnEjercicio2
+            // 
+            this.btnEjercicio2.Location = new System.Drawing.Point(44, 52);
+            this.btnEjercicio2.Name = "btnEjercicio2";
+            this.btnEjercicio2.Size = new System.Drawing.Size(189, 23);
+            this.btnEjercicio2.TabIndex = 0;
+            this.btnEjercicio2.Text = "Ejecutar busqueda binaria";
+            this.btnEjercicio2.UseVisualStyleBackColor = true;
+            this.btnEjercicio2.Click += new System.EventHandler(this.btnEjercicio2_Click);
+            // 
+            // lbEjercicio2
+            // 
+            this.lbEjercicio2.FormattingEnabled = true;
+            this.lbEjercicio2.ItemHeight = 16;
+            this.lbEjercicio2.Location = new System.Drawing.Point(33, 103);
+            this.lbEjercicio2.Name = "lbEjercicio2";
+            this.lbEjercicio2.Size = new System.Drawing.Size(714, 276);
+            this.lbEjercicio2.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,6 +199,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -193,6 +218,8 @@
         private System.Windows.Forms.TextBox tbBuscarEjercicio1;
         private System.Windows.Forms.Button btnBuscarEjercicio1;
         private System.Windows.Forms.Label lblResultadoEjercicio1;
+        private System.Windows.Forms.ListBox lbEjercicio2;
+        private System.Windows.Forms.Button btnEjercicio2;
     }
 }
 

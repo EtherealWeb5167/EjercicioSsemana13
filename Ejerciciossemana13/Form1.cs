@@ -15,14 +15,17 @@ namespace Ejerciciossemana13
     public partial class Form1 : Form
     {
 
+        // ejercicio 1
         int[] numeros = new int[20];
         bool listagenerada = false;
+        //ejercicio 1
 
         public Form1()
         {
             InitializeComponent();
         }
 
+        //ejercicio 1
         private void btnBuscarEjercicio1_Click(object sender, EventArgs e)
         {
             Random aleatorio = new Random();
@@ -41,6 +44,7 @@ namespace Ejerciciossemana13
 
         }
 
+        //ejercicio 1
         private void btnBuscarEjercicio1_Click_1(object sender, EventArgs e)
         {
             if (!listagenerada)
@@ -82,6 +86,63 @@ namespace Ejerciciossemana13
             else
             {
                 lblResultadoEjercicio1.Text = "El numero " + numeroBuscado + " no existe en la lista.";
+            }
+        }
+
+        //ejercicio2
+        private void btnEjercicio2_Click(object sender, EventArgs e)
+        {
+            lbEjercicio2.Items.Clear(); 
+
+            List<int> lista = new List<int>();
+            Random rnd = new Random();
+
+            for (int i = 0; i < 30; i++)
+            {
+                lista.Add(rnd.Next(1, 100));
+            }
+
+            //ORDENAR
+            lista.Sort();
+
+            lbEjercicio2.Items.Add("Lista Ordenada: " + string.Join(", ", lista));
+
+            
+            int buscado = rnd.Next(1,100);
+            lbEjercicio2.Items.Add("Buscando el numero: " + buscado);
+
+            int inicio = 0;
+            int fin = lista.Count - 1;
+            bool encontrado = false;
+
+            while (inicio <= fin)
+            {
+                int mitad = (inicio + fin) / 2;
+                int valorCentro = lista[mitad];
+
+                lbEjercicio2.Items.Add($"Revisando mitad: indice {mitad}, valor {valorCentro}");
+
+                if (valorCentro == buscado)
+                {
+                    lbEjercicio2.Items.Add("encontrado en indice " + mitad);
+                    encontrado = true;
+                    break;
+                }
+                else if (valorCentro < buscado)
+                {
+                    lbEjercicio2.Items.Add("El valor es menor, buscando en la derecha.");
+                    inicio = mitad + 1;
+                }
+                else
+                {
+                    lbEjercicio2.Items.Add("El valor es mayor, buscando en la izquierda.");
+                    fin = mitad - 1;
+                }
+            }
+
+            if (!encontrado)
+            {
+                lbEjercicio2.Items.Add("No se encontro el numero.");
             }
         }
     }
