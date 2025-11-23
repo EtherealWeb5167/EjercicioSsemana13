@@ -54,11 +54,16 @@
             this.tbBuscarNombre = new System.Windows.Forms.TextBox();
             this.btnBuscarNombre = new System.Windows.Forms.Button();
             this.lblResultadoEstudianteEjercicio4 = new System.Windows.Forms.Label();
+            this.lbEjercicio5 = new System.Windows.Forms.ListBox();
+            this.btnGenerarEjercicio5 = new System.Windows.Forms.Button();
+            this.btnCalcularEjercicio5 = new System.Windows.Forms.Button();
+            this.lblRespuestaEjercicio5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -134,6 +139,10 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lblRespuestaEjercicio5);
+            this.tabPage5.Controls.Add(this.btnCalcularEjercicio5);
+            this.tabPage5.Controls.Add(this.btnGenerarEjercicio5);
+            this.tabPage5.Controls.Add(this.lbEjercicio5);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(776, 405);
@@ -318,6 +327,44 @@
             this.lblResultadoEstudianteEjercicio4.TabIndex = 7;
             this.lblResultadoEstudianteEjercicio4.Text = "esperando";
             // 
+            // lbEjercicio5
+            // 
+            this.lbEjercicio5.FormattingEnabled = true;
+            this.lbEjercicio5.ItemHeight = 16;
+            this.lbEjercicio5.Location = new System.Drawing.Point(30, 119);
+            this.lbEjercicio5.Name = "lbEjercicio5";
+            this.lbEjercicio5.Size = new System.Drawing.Size(239, 228);
+            this.lbEjercicio5.TabIndex = 0;
+            // 
+            // btnGenerarEjercicio5
+            // 
+            this.btnGenerarEjercicio5.Location = new System.Drawing.Point(63, 55);
+            this.btnGenerarEjercicio5.Name = "btnGenerarEjercicio5";
+            this.btnGenerarEjercicio5.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerarEjercicio5.TabIndex = 1;
+            this.btnGenerarEjercicio5.Text = "generar";
+            this.btnGenerarEjercicio5.UseVisualStyleBackColor = true;
+            this.btnGenerarEjercicio5.Click += new System.EventHandler(this.btnGenerarEjercicio5_Click);
+            // 
+            // btnCalcularEjercicio5
+            // 
+            this.btnCalcularEjercicio5.Location = new System.Drawing.Point(162, 55);
+            this.btnCalcularEjercicio5.Name = "btnCalcularEjercicio5";
+            this.btnCalcularEjercicio5.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularEjercicio5.TabIndex = 2;
+            this.btnCalcularEjercicio5.Text = "callcular";
+            this.btnCalcularEjercicio5.UseVisualStyleBackColor = true;
+            this.btnCalcularEjercicio5.Click += new System.EventHandler(this.btnCalcularEjercicio5_Click);
+            // 
+            // lblRespuestaEjercicio5
+            // 
+            this.lblRespuestaEjercicio5.AutoSize = true;
+            this.lblRespuestaEjercicio5.Location = new System.Drawing.Point(260, 62);
+            this.lblRespuestaEjercicio5.Name = "lblRespuestaEjercicio5";
+            this.lblRespuestaEjercicio5.Size = new System.Drawing.Size(76, 16);
+            this.lblRespuestaEjercicio5.TabIndex = 3;
+            this.lblRespuestaEjercicio5.Text = "esperando ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,6 +381,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,6 +415,10 @@
         private System.Windows.Forms.Button btnBuscarNombre;
         private System.Windows.Forms.TextBox tbBuscarNombre;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRespuestaEjercicio5;
+        private System.Windows.Forms.Button btnCalcularEjercicio5;
+        private System.Windows.Forms.Button btnGenerarEjercicio5;
+        private System.Windows.Forms.ListBox lbEjercicio5;
     }
 }
 

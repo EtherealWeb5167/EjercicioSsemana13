@@ -27,7 +27,10 @@ namespace Ejerciciossemana13
         // ejercicio 1
         int[] numeros = new int[20];
         bool listagenerada = false;
-        //ejercicio 1
+
+        //ejercicio 5
+        List<int> listaEjercicio5 = new List<int>();
+
 
         public Form1()
         {
@@ -275,6 +278,61 @@ namespace Ejerciciossemana13
             {
                 MessageBox.Show("No se encontro el nombre.");
             }
+        }
+
+        private void btnGenerarEjercicio5_Click(object sender, EventArgs e)
+        {
+            listaEjercicio5.Clear(); 
+            lbEjercicio5.Items.Clear(); 
+
+            Random aleatorio = new Random();
+
+            for (int i = 0; i < 15; i++)
+            {
+                int numero = aleatorio.Next(1, 100);
+                listaEjercicio5.Add(numero);
+
+                lbEjercicio5.Items.Add(numero);
+            }
+        }
+
+        private void btnCalcularEjercicio5_Click(object sender, EventArgs e)
+        {
+            if (listaEjercicio5.Count == 0)
+            {
+                MessageBox.Show("Primero presiona el boton generar Lista.");
+                return;
+            }
+
+          
+            int maximo = listaEjercicio5[0];
+            int minimo = listaEjercicio5[0];
+            int iteraciones = 0;
+
+            foreach (int numero in listaEjercicio5)
+            {
+                iteraciones++;
+
+                //  El numero actual es mas grande que el maximo actual?
+                if (numero > maximo)
+                {
+                    maximo = numero; 
+                }
+
+                // El numero actual es mas pequeno queel minimo actual?
+                if (numero < minimo)
+                {
+                    minimo = numero;
+                }
+            }
+
+            
+            string mensaje = "";
+            mensaje += "El valor maximo es: " + maximo + "\n";
+            mensaje += "El valor minimo es: " + minimo + "\n";
+            mensaje += "Total de iteraciones: " + iteraciones;
+
+            lblRespuestaEjercicio5.Text = mensaje;
         }
     }
 }
