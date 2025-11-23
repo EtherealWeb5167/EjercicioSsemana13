@@ -145,5 +145,36 @@ namespace Ejerciciossemana13
                 lbEjercicio2.Items.Add("No se encontro el numero.");
             }
         }
+        
+        //ejercicio 3
+        private void btnBuscarEjercicio3_Click(object sender, EventArgs e)
+        {
+            string parrafo = tbEjercicio3parrafo.Text.ToLower(); 
+            string palabra = tbBuscarEjercicio3.Text.ToLower(); 
+            int contador = 0;
+
+            if (parrafo.Length == 0 || palabra.Length == 0) return;
+
+            for (int i = 0; i <= parrafo.Length - palabra.Length; i++)
+            {
+                bool coincide = true;
+
+                for (int j = 0; j < palabra.Length; j++)
+                {
+                    if (parrafo[i + j] != palabra[j])
+                    {
+                        coincide = false;
+                        break; 
+                    }
+                }
+
+                if (coincide)
+                {
+                    contador++;
+                }
+            }
+
+            lblResultadosEjercicio3.Text = "La palabra aparece " + contador + " veces.";
+        }
     }
 }

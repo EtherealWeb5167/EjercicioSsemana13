@@ -42,9 +42,14 @@
             this.lblResultadoEjercicio1 = new System.Windows.Forms.Label();
             this.btnEjercicio2 = new System.Windows.Forms.Button();
             this.lbEjercicio2 = new System.Windows.Forms.ListBox();
+            this.tbEjercicio3parrafo = new System.Windows.Forms.TextBox();
+            this.tbBuscarEjercicio3 = new System.Windows.Forms.TextBox();
+            this.btnBuscarEjercicio3 = new System.Windows.Forms.Button();
+            this.lblResultadosEjercicio3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,6 +95,10 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblResultadosEjercicio3);
+            this.tabPage3.Controls.Add(this.btnBuscarEjercicio3);
+            this.tabPage3.Controls.Add(this.tbBuscarEjercicio3);
+            this.tabPage3.Controls.Add(this.tbEjercicio3parrafo);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(776, 405);
@@ -188,6 +197,40 @@
             this.lbEjercicio2.Size = new System.Drawing.Size(714, 276);
             this.lbEjercicio2.TabIndex = 1;
             // 
+            // tbEjercicio3parrafo
+            // 
+            this.tbEjercicio3parrafo.Location = new System.Drawing.Point(23, 82);
+            this.tbEjercicio3parrafo.Multiline = true;
+            this.tbEjercicio3parrafo.Name = "tbEjercicio3parrafo";
+            this.tbEjercicio3parrafo.Size = new System.Drawing.Size(719, 308);
+            this.tbEjercicio3parrafo.TabIndex = 0;
+            // 
+            // tbBuscarEjercicio3
+            // 
+            this.tbBuscarEjercicio3.Location = new System.Drawing.Point(39, 33);
+            this.tbBuscarEjercicio3.Name = "tbBuscarEjercicio3";
+            this.tbBuscarEjercicio3.Size = new System.Drawing.Size(100, 22);
+            this.tbBuscarEjercicio3.TabIndex = 1;
+            // 
+            // btnBuscarEjercicio3
+            // 
+            this.btnBuscarEjercicio3.Location = new System.Drawing.Point(160, 33);
+            this.btnBuscarEjercicio3.Name = "btnBuscarEjercicio3";
+            this.btnBuscarEjercicio3.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarEjercicio3.TabIndex = 2;
+            this.btnBuscarEjercicio3.Text = "Buscar";
+            this.btnBuscarEjercicio3.UseVisualStyleBackColor = true;
+            this.btnBuscarEjercicio3.Click += new System.EventHandler(this.btnBuscarEjercicio3_Click);
+            // 
+            // lblResultadosEjercicio3
+            // 
+            this.lblResultadosEjercicio3.AutoSize = true;
+            this.lblResultadosEjercicio3.Location = new System.Drawing.Point(315, 36);
+            this.lblResultadosEjercicio3.Name = "lblResultadosEjercicio3";
+            this.lblResultadosEjercicio3.Size = new System.Drawing.Size(73, 16);
+            this.lblResultadosEjercicio3.TabIndex = 3;
+            this.lblResultadosEjercicio3.Text = "esperando";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,6 +243,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -220,6 +265,10 @@
         private System.Windows.Forms.Label lblResultadoEjercicio1;
         private System.Windows.Forms.ListBox lbEjercicio2;
         private System.Windows.Forms.Button btnEjercicio2;
+        private System.Windows.Forms.Label lblResultadosEjercicio3;
+        private System.Windows.Forms.Button btnBuscarEjercicio3;
+        private System.Windows.Forms.TextBox tbBuscarEjercicio3;
+        private System.Windows.Forms.TextBox tbEjercicio3parrafo;
     }
 }
 
