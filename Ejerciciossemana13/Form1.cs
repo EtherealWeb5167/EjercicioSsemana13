@@ -14,6 +14,10 @@ namespace Ejerciciossemana13
 {
     public partial class Form1 : Form
     {
+
+        //ejercicio 6
+        int[,] matriz = new int[10, 10];
+
         //ejercicio4
         public class Estudiante
         {
@@ -213,6 +217,8 @@ namespace Ejerciciossemana13
             lblResultadosEjercicio3.Text = "La palabra aparece " + contador + " veces.";
         }
 
+        //ejercicio4
+
         private void btnBuscarID_Click(object sender, EventArgs e)
         {
             int idBuscado = Convert.ToInt32(tbBuscarID.Text);
@@ -234,6 +240,8 @@ namespace Ejerciciossemana13
                 MessageBox.Show("No existe un estudiante con ese ID.");
             }
         }
+
+        //ejercicio4
 
         private void btnBuscarNombre_Click(object sender, EventArgs e)
         {
@@ -280,6 +288,8 @@ namespace Ejerciciossemana13
             }
         }
 
+
+        //ejercicio5
         private void btnGenerarEjercicio5_Click(object sender, EventArgs e)
         {
             listaEjercicio5.Clear(); 
@@ -296,6 +306,7 @@ namespace Ejerciciossemana13
             }
         }
 
+        //ejercicio5
         private void btnCalcularEjercicio5_Click(object sender, EventArgs e)
         {
             if (listaEjercicio5.Count == 0)
@@ -333,6 +344,71 @@ namespace Ejerciciossemana13
             mensaje += "Total de iteraciones: " + iteraciones;
 
             lblRespuestaEjercicio5.Text = mensaje;
+        }
+
+        //ejercicio6
+        private void btnGenerarMatriz_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            string textoMostrar = ""; 
+
+            // Recorre las filas del 0 al 9
+            for (int f = 0; f < 10; f++)
+            {
+                //Recorre las columnas del 0 al 9
+                for (int c = 0; c < 10; c++)
+                {
+                    //llenar con un numero random
+                    matriz[f, c] = rnd.Next(10, 100);
+
+                    // agregamr al texto con un espacio separador
+                    textoMostrar += matriz[f, c] + "   ";
+                }
+
+                // salto de linea
+                textoMostrar += "\r\n";
+            }
+
+            tbMatriz.Text = textoMostrar;
+        }
+
+        //ejercicio6
+        private void btnBuscarMatriz_Click(object sender, EventArgs e)
+        {
+            if (tbMatriz.Text == "")
+            {
+                MessageBox.Show("Primero genera la matriz");
+                return;
+            }
+
+            int buscado = Convert.ToInt32(tbMatrizEjercicio6.Text);
+            string encontrados = ""; 
+            bool existe = false;
+
+    
+
+            for (int f = 0; f < 10; f++) //  cada fila
+            {
+                for (int c = 0; c < 10; c++) // cada columna.
+                {
+                    // El numero en la fila F y columna C es el que busco?
+                    if (matriz[f, c] == buscado)
+                    {
+                        // Guardar la cordenadda
+                        encontrados += "Fila " + f + " - Columna " + c + "\n";
+                        existe = true;
+                    }
+                }
+            }
+
+            if (existe)
+            {
+                lblResultadoMatriz.Text = "Encontrado en:\n" + encontrados;
+            }
+            else
+            {
+                lblResultadoMatriz.Text = "El numero no esta en la matriz.";
+            }
         }
     }
 }

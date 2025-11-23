@@ -58,12 +58,18 @@
             this.btnGenerarEjercicio5 = new System.Windows.Forms.Button();
             this.btnCalcularEjercicio5 = new System.Windows.Forms.Button();
             this.lblRespuestaEjercicio5 = new System.Windows.Forms.Label();
+            this.tbMatriz = new System.Windows.Forms.TextBox();
+            this.btnGenerarMatriz = new System.Windows.Forms.Button();
+            this.btnBuscarMatriz = new System.Windows.Forms.Button();
+            this.tbMatrizEjercicio6 = new System.Windows.Forms.TextBox();
+            this.lblResultadoMatriz = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -152,6 +158,11 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.lblResultadoMatriz);
+            this.tabPage7.Controls.Add(this.tbMatrizEjercicio6);
+            this.tabPage7.Controls.Add(this.btnBuscarMatriz);
+            this.tabPage7.Controls.Add(this.btnGenerarMatriz);
+            this.tabPage7.Controls.Add(this.tbMatriz);
             this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(776, 405);
@@ -365,6 +376,51 @@
             this.lblRespuestaEjercicio5.TabIndex = 3;
             this.lblRespuestaEjercicio5.Text = "esperando ";
             // 
+            // tbMatriz
+            // 
+            this.tbMatriz.Location = new System.Drawing.Point(13, 83);
+            this.tbMatriz.Multiline = true;
+            this.tbMatriz.Name = "tbMatriz";
+            this.tbMatriz.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbMatriz.Size = new System.Drawing.Size(758, 318);
+            this.tbMatriz.TabIndex = 0;
+            // 
+            // btnGenerarMatriz
+            // 
+            this.btnGenerarMatriz.Location = new System.Drawing.Point(174, 54);
+            this.btnGenerarMatriz.Name = "btnGenerarMatriz";
+            this.btnGenerarMatriz.Size = new System.Drawing.Size(178, 23);
+            this.btnGenerarMatriz.TabIndex = 1;
+            this.btnGenerarMatriz.Text = "generar matriz";
+            this.btnGenerarMatriz.UseVisualStyleBackColor = true;
+            this.btnGenerarMatriz.Click += new System.EventHandler(this.btnGenerarMatriz_Click);
+            // 
+            // btnBuscarMatriz
+            // 
+            this.btnBuscarMatriz.Location = new System.Drawing.Point(174, 21);
+            this.btnBuscarMatriz.Name = "btnBuscarMatriz";
+            this.btnBuscarMatriz.Size = new System.Drawing.Size(178, 23);
+            this.btnBuscarMatriz.TabIndex = 2;
+            this.btnBuscarMatriz.Text = "buscar";
+            this.btnBuscarMatriz.UseVisualStyleBackColor = true;
+            this.btnBuscarMatriz.Click += new System.EventHandler(this.btnBuscarMatriz_Click);
+            // 
+            // tbMatrizEjercicio6
+            // 
+            this.tbMatrizEjercicio6.Location = new System.Drawing.Point(27, 22);
+            this.tbMatrizEjercicio6.Name = "tbMatrizEjercicio6";
+            this.tbMatrizEjercicio6.Size = new System.Drawing.Size(100, 22);
+            this.tbMatrizEjercicio6.TabIndex = 3;
+            // 
+            // lblResultadoMatriz
+            // 
+            this.lblResultadoMatriz.AutoSize = true;
+            this.lblResultadoMatriz.Location = new System.Drawing.Point(373, 28);
+            this.lblResultadoMatriz.Name = "lblResultadoMatriz";
+            this.lblResultadoMatriz.Size = new System.Drawing.Size(73, 16);
+            this.lblResultadoMatriz.TabIndex = 4;
+            this.lblResultadoMatriz.Text = "esperando";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -383,6 +439,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -419,6 +477,11 @@
         private System.Windows.Forms.Button btnCalcularEjercicio5;
         private System.Windows.Forms.Button btnGenerarEjercicio5;
         private System.Windows.Forms.ListBox lbEjercicio5;
+        private System.Windows.Forms.Button btnBuscarMatriz;
+        private System.Windows.Forms.Button btnGenerarMatriz;
+        private System.Windows.Forms.TextBox tbMatriz;
+        private System.Windows.Forms.TextBox tbMatrizEjercicio6;
+        private System.Windows.Forms.Label lblResultadoMatriz;
     }
 }
 
