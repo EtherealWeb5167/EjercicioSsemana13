@@ -14,6 +14,15 @@ namespace Ejerciciossemana13
 {
     public partial class Form1 : Form
     {
+        //ejercicio4
+        public class Estudiante
+        {
+            public int Id { get; set; }
+            public string Nombre { get; set; }
+        }
+
+        // EJERCICIO 4
+        List<Estudiante> misEstudiantes = new List<Estudiante>();
 
         // ejercicio 1
         int[] numeros = new int[20];
@@ -23,6 +32,30 @@ namespace Ejerciciossemana13
         public Form1()
         {
             InitializeComponent();
+
+            //EJERCICIO 4
+            CargarEstudiantes();
+        }
+
+        //ejercicio 4
+        private void CargarEstudiantes()
+        {
+
+            misEstudiantes.Add(new Estudiante { Id = 20, Nombre = "Ana" });
+            misEstudiantes.Add(new Estudiante { Id = 15, Nombre = "Beto" });
+            misEstudiantes.Add(new Estudiante { Id = 33, Nombre = "Carlos" });
+            misEstudiantes.Add(new Estudiante { Id = 12, Nombre = "Daniel" });
+            misEstudiantes.Add(new Estudiante { Id = 50, Nombre = "Elena" });
+            misEstudiantes.Add(new Estudiante { Id = 08, Nombre = "Fabio" });
+            misEstudiantes.Add(new Estudiante { Id = 41, Nombre = "Gabriela" });
+            misEstudiantes.Add(new Estudiante { Id = 19, Nombre = "Hugo" });
+            misEstudiantes.Add(new Estudiante { Id = 22, Nombre = "Irene" });
+            misEstudiantes.Add(new Estudiante { Id = 05, Nombre = "Juan" });
+
+            foreach (Estudiante est in misEstudiantes)
+            {
+                lbListadoEstudiantes.Items.Add(est.Id + " - " + est.Nombre);
+            }
         }
 
         //ejercicio 1
@@ -175,6 +208,73 @@ namespace Ejerciciossemana13
             }
 
             lblResultadosEjercicio3.Text = "La palabra aparece " + contador + " veces.";
+        }
+
+        private void btnBuscarID_Click(object sender, EventArgs e)
+        {
+            int idBuscado = Convert.ToInt32(tbBuscarID.Text);
+
+            bool encontrado = false;
+
+            foreach (Estudiante est in misEstudiantes)
+            {
+                if (est.Id == idBuscado)
+                {
+                    MessageBox.Show("encontrado Es: " + est.Nombre);
+                    encontrado = true;
+                    break; 
+                }
+            }
+
+            if (encontrado == false)
+            {
+                MessageBox.Show("No existe un estudiante con ese ID.");
+            }
+        }
+
+        private void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            string nombreBuscado = tbBuscarNombre.Text;
+
+            int izquierda = 0;                      
+            int derecha = misEstudiantes.Count - 1;  
+            bool encontrado = false;
+
+            
+            while (izquierda <= derecha)
+            {
+                int medio = (izquierda + derecha) / 2; 
+                string nombreDelMedio = misEstudiantes[medio].Nombre;
+
+                // funcinoamento del compareto:
+                // resultado es 0  -> Son iguales 
+                // resultado < 0   -> El del medio es menor (buscar a la derecha)
+                // resultado > 0   -> El del medio es mayor (buscar a la izquierda)
+
+                int resultado = nombreDelMedio.CompareTo(nombreBuscado);
+
+                if (resultado == 0)
+                {
+                    MessageBox.Show("encontrado ID: " + misEstudiantes[medio].Id);
+                    encontrado = true;
+                    break;
+                }
+                else if (resultado < 0)
+                {
+                    
+                    izquierda = medio + 1;
+                }
+                else
+                {
+                    
+                    derecha = medio - 1;
+                }
+            }
+
+            if (encontrado == false)
+            {
+                MessageBox.Show("No se encontro el nombre.");
+            }
         }
     }
 }

@@ -46,10 +46,19 @@
             this.tbBuscarEjercicio3 = new System.Windows.Forms.TextBox();
             this.btnBuscarEjercicio3 = new System.Windows.Forms.Button();
             this.lblResultadosEjercicio3 = new System.Windows.Forms.Label();
+            this.lbListadoEstudiantes = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbBuscarID = new System.Windows.Forms.TextBox();
+            this.btnBuscarID = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbBuscarNombre = new System.Windows.Forms.TextBox();
+            this.btnBuscarNombre = new System.Windows.Forms.Button();
+            this.lblResultadoEstudianteEjercicio4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -108,6 +117,14 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lblResultadoEstudianteEjercicio4);
+            this.tabPage4.Controls.Add(this.btnBuscarNombre);
+            this.tabPage4.Controls.Add(this.tbBuscarNombre);
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Controls.Add(this.btnBuscarID);
+            this.tabPage4.Controls.Add(this.tbBuscarID);
+            this.tabPage4.Controls.Add(this.label1);
+            this.tabPage4.Controls.Add(this.lbListadoEstudiantes);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(776, 405);
@@ -231,6 +248,76 @@
             this.lblResultadosEjercicio3.TabIndex = 3;
             this.lblResultadosEjercicio3.Text = "esperando";
             // 
+            // lbListadoEstudiantes
+            // 
+            this.lbListadoEstudiantes.FormattingEnabled = true;
+            this.lbListadoEstudiantes.ItemHeight = 16;
+            this.lbListadoEstudiantes.Location = new System.Drawing.Point(3, 114);
+            this.lbListadoEstudiantes.Name = "lbListadoEstudiantes";
+            this.lbListadoEstudiantes.Size = new System.Drawing.Size(526, 260);
+            this.lbListadoEstudiantes.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(275, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Buscar por ID";
+            // 
+            // tbBuscarID
+            // 
+            this.tbBuscarID.Location = new System.Drawing.Point(98, 44);
+            this.tbBuscarID.Name = "tbBuscarID";
+            this.tbBuscarID.Size = new System.Drawing.Size(155, 22);
+            this.tbBuscarID.TabIndex = 2;
+            // 
+            // btnBuscarID
+            // 
+            this.btnBuscarID.Location = new System.Drawing.Point(110, 72);
+            this.btnBuscarID.Name = "btnBuscarID";
+            this.btnBuscarID.Size = new System.Drawing.Size(121, 33);
+            this.btnBuscarID.TabIndex = 3;
+            this.btnBuscarID.Text = "Buscar Id lineal";
+            this.btnBuscarID.UseVisualStyleBackColor = true;
+            this.btnBuscarID.Click += new System.EventHandler(this.btnBuscarID_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(585, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Buscar por nombre";
+            // 
+            // tbBuscarNombre
+            // 
+            this.tbBuscarNombre.Location = new System.Drawing.Point(410, 50);
+            this.tbBuscarNombre.Name = "tbBuscarNombre";
+            this.tbBuscarNombre.Size = new System.Drawing.Size(155, 22);
+            this.tbBuscarNombre.TabIndex = 5;
+            // 
+            // btnBuscarNombre
+            // 
+            this.btnBuscarNombre.Location = new System.Drawing.Point(426, 78);
+            this.btnBuscarNombre.Name = "btnBuscarNombre";
+            this.btnBuscarNombre.Size = new System.Drawing.Size(121, 33);
+            this.btnBuscarNombre.TabIndex = 6;
+            this.btnBuscarNombre.Text = "buscar nombre";
+            this.btnBuscarNombre.UseVisualStyleBackColor = true;
+            this.btnBuscarNombre.Click += new System.EventHandler(this.btnBuscarNombre_Click);
+            // 
+            // lblResultadoEstudianteEjercicio4
+            // 
+            this.lblResultadoEstudianteEjercicio4.AutoSize = true;
+            this.lblResultadoEstudianteEjercicio4.Location = new System.Drawing.Point(544, 138);
+            this.lblResultadoEstudianteEjercicio4.Name = "lblResultadoEstudianteEjercicio4";
+            this.lblResultadoEstudianteEjercicio4.Size = new System.Drawing.Size(73, 16);
+            this.lblResultadoEstudianteEjercicio4.TabIndex = 7;
+            this.lblResultadoEstudianteEjercicio4.Text = "esperando";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,6 +332,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -269,6 +358,14 @@
         private System.Windows.Forms.Button btnBuscarEjercicio3;
         private System.Windows.Forms.TextBox tbBuscarEjercicio3;
         private System.Windows.Forms.TextBox tbEjercicio3parrafo;
+        private System.Windows.Forms.Button btnBuscarID;
+        private System.Windows.Forms.TextBox tbBuscarID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lbListadoEstudiantes;
+        private System.Windows.Forms.Label lblResultadoEstudianteEjercicio4;
+        private System.Windows.Forms.Button btnBuscarNombre;
+        private System.Windows.Forms.TextBox tbBuscarNombre;
+        private System.Windows.Forms.Label label2;
     }
 }
 
